@@ -4,26 +4,24 @@ import { render } from '@testing-library/react';
 
 import { Header } from '~/components';
 
-describe('Fashionista', () => {
-  describe('Components data-testid match', () => {
-    it('should render properly the <Header> component', () => {
-      const component = (
-        <Router>
-          <Header />
-        </Router>
-      );
+describe('Components data-testid match', () => {
+  it('should render properly the <Header> component', () => {
+    const component = (
+      <Router>
+        <Header />
+      </Router>
+    );
 
-      const { getByTestId } = render(component);
+    const { getByTestId } = render(component);
 
-      const container = getByTestId('header');
-      const headerLogo = getByTestId('header-logo');
-      const headerSearchIcon = getByTestId('header-search-icon');
-      const headerBagIcon = getByTestId('header-bag-icon');
+    const container = getByTestId('header');
+    const headerLogo = getByTestId('header-logo');
+    const headerSearchIcon = getByTestId('header-search-icon');
+    const headerBagIcon = getByTestId('header-bag-icon');
 
-      expect(container).toBeDefined();
-      expect(headerLogo).toBeDefined();
-      expect(headerSearchIcon).toBeDefined();
-      expect(headerBagIcon).toBeDefined();
-    });
+    expect(container).toBeDefined();
+    expect(headerLogo).toBeDefined();
+    expect(headerSearchIcon).toBeDefined();
+    expect(headerBagIcon).toBeDefined();
   });
 });

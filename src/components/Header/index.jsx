@@ -6,7 +6,7 @@ import logoLight from '~/assets/logos/logo-light.svg';
 
 import './styles.scss';
 
-export default function Header() {
+const Header = () => {
   return (
     <header className="header" data-testid="header">
       <div className="container header-containter">
@@ -36,4 +36,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
